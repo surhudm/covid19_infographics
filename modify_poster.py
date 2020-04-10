@@ -47,6 +47,7 @@ class fill_poster:
         self.output_fixed_width_text(strings["3"], plx[2], ply[2], width[2], font=fonts["3"])
         self.output_fixed_width_text(strings["4"], plx[3], ply[3], width[3], font=fonts["4"])
         self.output_fixed_width_text(strings["5"], plx[4], ply[4], width[4], font=fonts["4"])
+        self.output_fixed_width_text(strings["6"], plx[5], ply[5], width[5], font=fonts["4"])
 
         # Save the file
         self.image.save(self.imagename+"_%s.jpeg" % language)
@@ -75,15 +76,16 @@ if __name__ == "__main__":
     fonts["4"] = ImageFont.truetype(config[language]["font4"], size=config[language]["size4"])
 
     # Read the translations
-    df = pandas.read_csv("Sample.csv")
+    url='https://docs.google.com/spreadsheets/d/1-XE8OUsEtGRMqlQC4T4D_xWxlU_N3PYzjibxPZdLaTw/export?format=csv'
+    df = pandas.read_csv(url)
     df.fillna("", inplace = True)
 
     strings = {}
     # First read the Series title
     jj = 1
-    strings["%d" % jj] = df["%s" % language].values[0] 
-    jj = jj + 1
-
+    #strings["%d" % jj] = df["%s" % language].values[0] 
+    #print(jj,strings)
+    #jj = jj + 1
     # Setup translation strings for each language
     for ii in range(1, df["%s" % language].values.size):
        
@@ -91,8 +93,9 @@ if __name__ == "__main__":
             continue
 
         strings["%d" % jj] = df["%s" % language].values[ii]
+        #print(ii,jj,strings)
         jj = jj + 1
-
     # Now output
     a = fill_poster("Sample_images/Image_%05d" % imagenum)
+    #print(strings)
     a.convert(imagenum, strings, plx, ply, width, language, fonts)
