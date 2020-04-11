@@ -1,14 +1,42 @@
+Malayalam:
+  font1: Noto/Malayalam/NotoSansMalayalam-Regular.ttf 
+  font2: Noto/Malayalam/NotoSansMalayalam-Bold.ttf 
+  font3: Noto/Malayalam/NotoSansMalayalam-Bold.ttf 
+  size1: 75
+  size2: 90
+  size3: 65
+Tamil:
+  font1: Noto/Tamil/NotoSansTamil-Regular.ttf 
+  font2: Noto/Tamil/NotoSansTamil-Bold.ttf 
+  font3: Noto/Tamil/NotoSansTamil-Bold.ttf 
+  size1: 70
+  size2: 80
+  size3: 65
+Bangla:
+  font1: Noto/Bengali/NotoSansBengali-Regular.ttf 
+  font2: Noto/Bengali/NotoSansBengali-Bold.ttf 
+  font3: Noto/Bengali/NotoSansBengali-Bold.ttf 
+  size1: 90
+  size2: 120
+  size3: 60
+Hindi:
+  font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
+  font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
+  font3: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
+  size1: 80
+  size2: 100
+  size3: 70
 Marathi:
   font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
   font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
-  font3: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
-  size1: 25
-  size2: 30
-  size3: 20
+  font3: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
+  size1: 80
+  size2: 100
+  size3: 70
 English:
   font1: Noto/English/Montserrat-Regular.ttf 
   font2: Noto/English/Montserrat-Bold.ttf 
   font3: Noto/English/Montserrat-Bold.ttf 
-  size1: 45
-  size2: 60
-  size3: 52
+  size1: 80
+  size2: 100
+  size3: 60
