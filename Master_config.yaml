@@ -2,15 +2,17 @@ Marathi:
   font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
   font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
   font3: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
+  font4: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
   size1: 25
   size2: 30
   size3: 20
+  size4: 20
 English:
   font1: Noto/English/Montserrat-Regular.ttf 
   font2: Noto/English/Montserrat-Bold.ttf 
   font3: Noto/English/Montserrat-Regular.ttf 
   font4: Noto/English/Montserrat-Regular.ttf 
   size1: 45
-  size2: 60
-  size3: 30
-  size4: 30
+  size2: 50
+  size3: 35
+  size4: 35

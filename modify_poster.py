@@ -3,6 +3,7 @@
 # Code to insert text in poster jpg files.
 #
 # Copyright: Surhud More (IUCAA) 2020
+# Edited: Akshat Singhal (IIT Bombay) 2020
 #
 # Bug reports/comments: Open github issues, or send pull requests
 
