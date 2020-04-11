@@ -3,7 +3,6 @@
 # Code to insert text in poster jpg files.
 #
 # Copyright: Surhud More (IUCAA) 2020
-# Edited: Akshat Singhal (IIT Bombay) 2020
 #
 # Bug reports/comments: Open github issues, or send pull requests
 
@@ -77,25 +76,32 @@ if __name__ == "__main__":
     fonts["4"] = ImageFont.truetype(config[language]["font4"], size=config[language]["size4"])
 
     # Read the translations
-    df = pandas.read_csv("Sample.csv")
+    url='https://docs.google.com/spreadsheets/d/1jxzn0lksiVmuAbzRJTgrM_Y3YxYENjPu07pHMGE3PlE/export?format=csv'
+    df = pandas.read_csv(url)
     df.fillna("", inplace = True)
+
+    print (df["%s" % language].values.size)
+    print (df.Image.values)
 
     strings = {}
     # First read the Series title
     jj = 1
     strings["%d" % jj] = df["%s" % language].values[0] 
+    print(jj,strings)
     jj = jj + 1
 
     # Setup translation strings for each language
     for ii in range(1, df["%s" % language].values.size):
        
         if df.Image.values[ii] !=  imagenum:
+            print("continuing", df.Image.values[ii],  imagenum)
             continue
 
         strings["%d" % jj] = df["%s" % language].values[ii]
+        print(ii,jj,strings)
         jj = jj + 1
-    print (strings)
 
     # Now output
     a = fill_poster("Sample_images/Image_%05d" % imagenum)
+    #print(strings)
     a.convert(imagenum, strings, plx, ply, width, language, fonts)
