@@ -84,17 +84,18 @@ if __name__ == "__main__":
     df = pandas.read_csv('Sample.csv')
     df.fillna("", inplace = True)
     #v=time.time(); print(v-u) 
+
     strings = {}
     # First read the Series title
     jj = 1
     strings["%d" % jj] = df["%s" % language].values[0] 
-    #print(jj,strings)
+    print(jj,strings)
     jj = jj + 1
     # Setup translation strings for each language
     for ii in range(1, df["%s" % language].values.size):
         #v=time.time(); print(v-u) 
         if df.Image.values[ii] !=  imagenum:
-            #v=time.time(); print(v-u)
+            #print("continuing", df.Image.values[ii],  imagenum)
             continue
 
         strings["%d" % jj] = df["%s" % language].values[ii]
@@ -104,6 +105,5 @@ if __name__ == "__main__":
     # Now output
     a = fill_poster("Sample_images/Image_%05d" % imagenum)
     #print(strings)
-    #v=time.time(); print(v-u)
     a.convert(imagenum, strings, plx, ply, width, language, fonts)
     #v=time.time(); print(v-u)
