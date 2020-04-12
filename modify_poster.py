@@ -12,11 +12,12 @@ from os import path
 import numpy as np
 import sys
 import pandas
+import time
 
 class fill_poster:
     def __init__(self, image):
         self.imagename = image
-        self.image = Image.open(image+".jpeg")
+        self.image = Image.open(image+".jpg")
         self.fullwidth = self.image.width
 
     # Outputs text centered on the whole picture. The value of x is ignored in this case
@@ -50,38 +51,39 @@ class fill_poster:
         self.output_fixed_width_text(strings["6"], plx[5], ply[5], width[5], font=fonts["4"])
 
         # Save the file
-        self.image.save(self.imagename+"_%s.jpeg" % language)
+        self.image.save(self.imagename+"_%s.jpg" % language)
 
 if __name__ == "__main__":
-
+    u=time.time()
     imagenum = int(sys.argv[1])
     language = sys.argv[2]
-
+    mul = float(sys.argv[3])
     # Read the placements file, format will be:
     # x, y, width
-    plx, ply, width = np.loadtxt("%s/placements.txt" % (language), unpack=1)
-
+    plx, ply, width = np.loadtxt("%s/placements.txt" % (language), unpack=1)*mul
+    #v=time.time(); print(v-u)
     # For every string read x, y, 
 
     # Read the fonts information
     from yaml import load, Loader
+    #v=time.time(); print(v-u)
     fin = open("Master_config.yaml", "r")
+    #v=time.time(); print(v-u) 
     config = load(fin, Loader=Loader)
 
     # Setup fonts
     fonts = {}
-    fonts["1"] = ImageFont.truetype(config[language]["font1"], size=config[language]["size1"])
-    fonts["2"] = ImageFont.truetype(config[language]["font2"], size=config[language]["size2"])
-    fonts["3"] = ImageFont.truetype(config[language]["font3"], size=config[language]["size3"])
-    fonts["4"] = ImageFont.truetype(config[language]["font4"], size=config[language]["size4"])
-
+    fonts["1"] = ImageFont.truetype(config[language]["font1"], size=int(config[language]["size1"]*mul))
+    fonts["2"] = ImageFont.truetype(config[language]["font2"], size=int(config[language]["size2"]*mul))
+    fonts["3"] = ImageFont.truetype(config[language]["font3"], size=int(config[language]["size3"]*mul))
+    fonts["4"] = ImageFont.truetype(config[language]["font4"], size=int(config[language]["size4"]*mul))
+    #v=time.time(); print(v-u) 
     # Read the translations
-    url='https://docs.google.com/spreadsheets/d/1jxzn0lksiVmuAbzRJTgrM_Y3YxYENjPu07pHMGE3PlE/export?format=csv'
-    df = pandas.read_csv(url)
+    url='https://docs.google.com/spreadsheets/d/1-XE8OUsEtGRMqlQC4T4D_xWxlU_N3PYzjibxPZdLaTw/export?format=csv'
+    #df = pandas.read_csv(url)
+    df = pandas.read_csv('Sample.csv')
     df.fillna("", inplace = True)
-
-    print (df["%s" % language].values.size)
-    print (df.Image.values)
+    #v=time.time(); print(v-u) 
 
     strings = {}
     # First read the Series title
@@ -89,19 +91,19 @@ if __name__ == "__main__":
     strings["%d" % jj] = df["%s" % language].values[0] 
     print(jj,strings)
     jj = jj + 1
-
     # Setup translation strings for each language
     for ii in range(1, df["%s" % language].values.size):
-       
+        #v=time.time(); print(v-u) 
         if df.Image.values[ii] !=  imagenum:
-            print("continuing", df.Image.values[ii],  imagenum)
+            #print("continuing", df.Image.values[ii],  imagenum)
             continue
 
         strings["%d" % jj] = df["%s" % language].values[ii]
         print(ii,jj,strings)
         jj = jj + 1
-
+        #v=time.time(); print(v-u)
     # Now output
     a = fill_poster("Sample_images/Image_%05d" % imagenum)
     #print(strings)
     a.convert(imagenum, strings, plx, ply, width, language, fonts)
+    #v=time.time(); print(v-u)

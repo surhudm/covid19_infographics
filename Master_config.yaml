@@ -3,11 +3,137 @@ Marathi:
   font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
   font3: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
   font4: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
-  size1: 25
-  size2: 30
-  size3: 20
-  size4: 20
+  size1: 45
+  size2: 50
+  size3: 35
+  size4: 35
 English:
+  font1: Noto/English/Montserrat-Regular.ttf 
+  font2: Noto/English/Montserrat-Bold.ttf 
+  font3: Noto/English/Montserrat-Regular.ttf 
+  font4: Noto/English/Montserrat-Regular.ttf 
+  size1: 45
+  size2: 50
+  size3: 35
+  size4: 35
+Hindi:
+  font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
+  font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
+  font3: Noto/Devanagari/NotoSansDevanagari-Regular.ttf
+  font4: Noto/Devanagari/NotoSansDevanagari-Regular.ttf
+  size1: 45
+  size2: 50
+  size3: 35
+  size4: 35
+Malayalam:
+  font1: Noto/Malayalam/NotoSansMalayalam-Regular.ttf 
+  font2: Noto/Malayalam/NotoSansMalayalam-Bold.ttf 
+  font3: Noto/Malayalam/NotoSansMalayalam-Regular.ttf 
+  font4: Noto/Malayalam/NotoSansMalayalam-Regular.ttf 
+  size1: 45
+  size2: 48
+  size3: 35
+  size4: 35
+Bangla:
+  font1: Noto/Bengali/NotoSansBengali-Regular.ttf 
+  font2: Noto/Bengali/NotoSansBengali-Bold.ttf 
+  font3: Noto/Bengali/NotoSansBengali-Regular.ttf  
+  font4: Noto/Bengali/NotoSansBengali-Regular.ttf 
+  size1: 45
+  size2: 50
+  size3: 35
+  size4: 35
+Gujarati:
+  font1: Noto/Gujarati/NotoSansGujarati-Regular.ttf 
+  font2: Noto/Gujarati/NotoSansGujarati-Bold.ttf 
+  font3: Noto/Gujarati/NotoSansGujarati-Regular.ttf 
+  font4: Noto/Gujarati/NotoSansGujarati-Regular.ttf 
+  size1: 45
+  size2: 50
+  size3: 35
+  size4: 35
+Punjabi:
+  font1: Noto/Punjabi/NotoSansGurmukhi-Regular.ttf 
+  font2: Noto/Punjabi/NotoSansGurmukhi-Bold.ttf 
+  font3: Noto/Punjabi/NotoSansGurmukhi-Regular.ttf
+  font4: Noto/Punjabi/NotoSansGurmukhi-Regular.ttf 
+  size1: 45
+  size2: 50
+  size3: 35
+  size4: 35
+Tamil:
+  font1: Noto/Tamil/NotoSansTamil-Regular.ttf 
+  font2: Noto/Tamil/NotoSansTamil-Bold.ttf 
+  font3: Noto/Tamil/NotoSansTamil-Regular.ttf 
+  font4: Noto/Tamil/NotoSansTamil-Regular.ttf 
+  size1: 40
+  size2: 50
+  size3: 30
+  size4: 30
+Telugu:
+  font1: Noto/Telugu/NotoSansTelugu-Regular.ttf 
+  font2: Noto/Telugu/NotoSansTelugu-Bold.ttf 
+  font3: Noto/Telugu/NotoSansTelugu-Regular.ttf 
+  font4: Noto/Telugu/NotoSansTelugu-Regular.ttf 
+  size1: 45
+  size2: 50
+  size3: 35
+  size4: 35
+Kannada:
+  font1: Noto/Kannada/NotoSansKannada-Regular.ttf 
+  font2: Noto/Kannada/NotoSansKannada-Bold.ttf 
+  font3: Noto/Kannada/NotoSansKannada-Regular.ttf 
+  font4: Noto/Kannada/NotoSansKannada-Regular.ttf 
+  size1: 45
+  size2: 50
+  size3: 30
+  size4: 30
+Assamese:
+  font1: Noto/Bengali/NotoSansBengali-Regular.ttf 
+  font2: Noto/Bengali/NotoSansBengali-Bold.ttf 
+  font3: Noto/Bengali/NotoSansBengali-Regular.ttf 
+  font4: Noto/Bengali/NotoSansBengali-Regular.ttf 
+  size1: 45
+  size2: 50
+  size3: 35
+  size4: 35
+Urdu:
+  font1: Noto/Urdu/NotoNastaliqUrdu-Regular.ttf 
+  font2: Noto/Urdu/NotoNastaliqUrdu-Regular.ttf 
+  font3: Noto/Urdu/NotoNastaliqUrdu-Regular.ttf 
+  font4: Noto/Urdu/NotoNastaliqUrdu-Regular.ttf 
+  size1: 32
+  size2: 40
+  size3: 25
+  size4: 25
+Manipuri:
+  font1: Noto/Bengali/NotoSansBengali-Regular.ttf 
+  font2: Noto/Bengali/NotoSansBengali-Bold.ttf 
+  font3: Noto/Bengali/NotoSansBengali-Regular.ttf 
+  font4: Noto/Bengali/NotoSansBengali-Regular.ttf 
+  size1: 45
+  size2: 50
+  size3: 35
+  size4: 35
+Konkani:
+  font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
+  font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
+  font3: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
+  font4: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
+  size1: 45
+  size2: 50
+  size3: 35
+  size4: 35
+Nepali:
+  font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
+  font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
+  font3: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
+  font4: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
+  size1: 45
+  size2: 50
+  size3: 35
+  size4: 35
+Portuguese:
   font1: Noto/English/Montserrat-Regular.ttf 
   font2: Noto/English/Montserrat-Bold.ttf 
   font3: Noto/English/Montserrat-Regular.ttf 
